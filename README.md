@@ -7,8 +7,8 @@ All running on the Ubuntu 13.10 (Saucy Salamander)
 
 Installation
 ------------
-1. Install [Vagrant 1.3.5](http://downloads.vagrantup.com/)
-2. Install [VirtualBox 4.3](https://www.virtualbox.org/wiki/Downloads)
+1. Install [Vagrant 2.5](http://downloads.vagrantup.com/)
+2. Install [VirtualBox 5.2.8](https://www.virtualbox.org/wiki/Downloads)
 3. Install [Ansible](http://www.ansibleworks.com/docs/intro_installation.html)
 
 Running
@@ -37,7 +37,7 @@ Note: part of the provisioning process ensures that Mongo is already running on 
 
 Ansible
 -------
-Ansible is configured to run for the vagrant host and you can see the specified private IP in `provisioning/hosts`. 
+Ansible is configured to run for the vagrant host and you can see the specified private IP in `provisioning/hosts`.
 
 If for some reason you want to use a different IP, be aware that you will need to update the `Vagrantfile` as well as `provisioning/hosts`.
 

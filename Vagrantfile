@@ -25,7 +25,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # 4GB ram
     v.memory = 5120
     v.gui = true
-    v.graceful_halt_timeout = 90
   end
 
   #config.ssh.forward_agent = true
