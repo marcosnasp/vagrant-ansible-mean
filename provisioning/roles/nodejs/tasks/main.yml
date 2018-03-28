@@ -21,7 +21,7 @@
   become: true
   tags: nodejs
 
-- name: Build-Essentials | Add Build Essentials Package
-  apt: pkg=build-essencials update-cache=yes
+- name: Build-Essential | Add Build Essential Package
+  apt: pkg=build-essential update-cache=yes
   become: true
   tags: nodejs

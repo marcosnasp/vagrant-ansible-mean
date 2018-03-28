@@ -4,3 +4,8 @@
   apt:
     update_cache: yes
   tags: common
+
+- name: Install | install Vim
+  become: true
+  apt: pkg=vim update-cache=yes
+  tags: common

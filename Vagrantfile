@@ -23,7 +23,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # max 75% CPU cap
     v.customize ["modifyvm", :id, "--cpuexecutioncap", "75"]
     # 4GB ram
-    v.memory = 4096
+    v.memory = 5120
+    v.gui = true
+    v.graceful_halt_timeout = 90
   end
 
   #config.ssh.forward_agent = true

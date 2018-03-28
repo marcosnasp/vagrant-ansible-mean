@@ -5,6 +5,7 @@
   roles:
     - common
     - git
+    - tools
     - ruby
     - nodejs
     - mongodb
