@@ -1,10 +1,6 @@
 ---
 - name: Common | Update apt cache
-  sudo: yes
-  apt: update-cache=yes
-  tags: common
-
-- name: Common | Update language
-  sudo: yes
-  apt: pkg=language-pack-en
+  become: true
+  apt:
+    update_cache: yes
   tags: common

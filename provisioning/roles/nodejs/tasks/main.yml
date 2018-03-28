@@ -1,15 +1,27 @@
 ---
 - name: Node.js | Package prerequisites for node.js
-  apt: pkg=python-software-properties state=present
-  sudo: yes
+  apt: pkg=software-properties-common state=present
+  become: true
+  tags: nodejs
+
+- name: Curl | Install Curl
+  apt: pkg=curl update-cache=yes
+  become: true
   tags: nodejs
 
 - name: Node.js | Add the Node.js PPA
-  apt_repository: repo='ppa:chris-lea/node.js' state=present
-  sudo: yes
+  shell:
+    curl -sL https://deb.nodesource.com/setup_8.x |
+    sudo -E bash -
+  became: true
   tags: nodejs
 
 - name: Node.js | Install Node.js and npm
   apt: pkg=nodejs update-cache=yes
-  sudo: yes
+  become: true
+  tags: nodejs
+
+- name: Build-Essentials | Add Build Essentials Package
+  apt: pkg=build-essencials update-cache=yes
+  become: true
   tags: nodejs

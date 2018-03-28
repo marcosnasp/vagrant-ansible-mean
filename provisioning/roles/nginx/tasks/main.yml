@@ -1,15 +1,14 @@
----
 - name: Nginx | Install nginx
-  sudo: yes
+  become: true
   apt: pkg=nginx
   tags: nginx
 
 - name: Nginx | Setup reverse proxy
-  sudo: yes
+  become: true
   template: src=default dest=/etc/nginx/sites-available/
   tags: nginx
 
 - name: Nginx | Start nginx
-  sudo: yes
+  become: true
   service: name=nginx state=restarted
   tags: nginx
