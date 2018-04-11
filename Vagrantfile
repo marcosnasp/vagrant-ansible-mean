@@ -15,15 +15,17 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "debian/stretch64"
+  config.vm.box = "ubuntu/xenial64"
 
    # configurating the vm
   config.vm.provider "virtualbox" do |v|
-    v.name = "Debian_v9.4_x64"
-    # max 75% CPU cap
-    v.customize ["modifyvm", :id, "--cpuexecutioncap", "75"]
+    v.name = "Ubuntu_16.04_LTS"
+    # max 70% CPU cap
+    v.customize ["modifyvm", :id, "--cpuexecutioncap", "70"]
     # 4GB ram
-    v.memory = 5120
+    v.memory = 6144
+    # cpus (3)
+    v.cpus = 4
     v.gui = true
   end
 

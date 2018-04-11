@@ -51,6 +51,8 @@ end
 
 Ansible installs the following packages:
 * git
+* tools
+* ruby
 * nodejs
 * mongodb
 * yeoman
