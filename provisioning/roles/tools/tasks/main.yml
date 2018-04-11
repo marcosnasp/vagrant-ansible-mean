@@ -83,6 +83,6 @@
     sudo tar -xzf postman.tar.gz -C /opt
     rm postman.tar.gz
     sudo ln -s /opt/Postman/Postman /usr/bin/postman
-    echo -e 'Desktop Entry]\nEncoding=UTF-8\nName=Postman\nExec=postman\nIcon=/opt/Postman/resources/app/assets/icon.png\nTerminal=false\nType=Application\nCategories=Development;' | sudo tee ~/.local/share/applications/postman.desktop
+    echo -e '[Desktop Entry]\nEncoding=UTF-8\nName=Postman\nExec=postman\nIcon=/opt/Postman/resources/app/assets/icon.png\nTerminal=false\nType=Application\nCategories=Development;' | sudo tee ~/.local/share/applications/postman.desktop
   become: true
   tags: tools
