@@ -3,6 +3,32 @@
   become: true
   tags: tools
 
+- name: SDKMan | Install SDKMan
+  shell: |
+    sudo curl -s "https://get.sdkman.io" | bash
+    sudo source "$HOME/.sdkman/bin/sdkman-init.sh"
+    sdk version
+  become: true
+  tags: tools
+
+- name: Java | Install JDK 1.8
+  shell: |
+    sdk install java
+  become: true
+  tags: tools
+
+- name: Maven | Install Latest Maven
+  shell: |
+    sdk install maven
+  become: true
+  tags: tools
+
+- name: Gradle | Install Latest Gradle
+  shell: |
+    sdk install gradle
+  become: true
+  tags: tools
+
 - name: Visual Code | Install Mic. Visual Code
   shell: |
     curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
@@ -60,24 +86,3 @@
     echo -e 'Desktop Entry]\nEncoding=UTF-8\nName=Postman\nExec=postman\nIcon=/opt/Postman/resources/app/assets/icon.png\nTerminal=false\nType=Application\nCategories=Development;' | sudo tee ~/.local/share/applications/postman.desktop
   become: true
   tags: tools
-
-- name: SDKMan | Install SDKMan
-  shell: |
-    sudo curl -s "https://get.sdkman.io" | bash
-    sudo source "$HOME/.sdkman/bin/sdkman-init.sh"
-    sdk version
-  become: true
-  tags: tools
-
-- name: Maven | Install Latest Maven
-  shell: |
-    sdk install maven
-  become: true
-  tags: tools
-
-- name: Gradle | Install Latest Gradle
-  shell: |
-    sdk install gradle
-  become: true
-  tags: tools
-
