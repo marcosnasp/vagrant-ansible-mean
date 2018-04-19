@@ -9,7 +9,7 @@ Installation
 ------------
 1. Install [Vagrant 2.5](http://downloads.vagrantup.com/)
 2. Install [VirtualBox 5.2.8](https://www.virtualbox.org/wiki/Downloads)
-3. Install [Ansible](http://www.ansibleworks.com/docs/intro_installation.html)
+3. Install [Ansible](https://www.ansible.com/)
 
 Running
 -------
